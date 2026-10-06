@@ -16,7 +16,7 @@ id (`#profile-photo`, `#languages`, `#info-email`, `#contact-form`) selectors, a
 Open `cv/index.html` in a browser.
 
 ## Known problems / unfinished parts
-- Name, email and language levels are real; the other details (date of birth, high school, certificates, projects, hobbies) are placeholders, as the lab sheet allows.
+- Name, email, language levels, high school and baccalaureate grade are real; date of birth, driving licence, certificates, projects and hobbies are placeholders, as the lab sheet allows.
   The images are simple SVG drawings, not real photos.
 - The form has `action="#"`, so pressing "Send message" only reloads the page.
 
@@ -24,8 +24,11 @@ Open `cv/index.html` in a browser.
 
 | # | What I asked the AI (short) | What I changed, or what the AI got wrong |
 |---|-----------------------------|-------------------------------------------|
-| 1 | Asked Claude (Anthropic) to write the CV page (HTML, CSS and SVG images) for Homework 1. | <write what you changed, e.g. your own name, skills, projects> |
-| 2 | <next question you asked, if any> | <what you changed> |
+| 1 | Asked Claude (Anthropic) to write the CV page (HTML, CSS and SVG images) for Homework 1. | The first version used invented data (the name "Alex Rusu" and an example email address). |
+| 2 | Asked to put in my real name, email and language levels. | I replaced the invented data with mine: Dragomir David Ștefan, david.dragomir@student.unitbv.ro, German B1, English C1. |
+| 3 | Asked to keep the language table as it was before (Claude had replaced the "Certificate" column). | The original table format is back; only the certificates were changed to match the new levels (DSD I, Cambridge C1 Advanced). |
+| 4 | Asked for a more polished design. | Claude redesigned the page (hero header, sticky menu, two-column layout, skill bars, timeline, project cards). It also found and fixed a horizontal overflow on phones and a badly wrapped email address. |
+| 5 | Asked to change my high school and baccalaureate grade. | I added my real data: "Emil Racoviță" High School (natural sciences), baccalaureate average 8.65. |
 
 **One thing I learned in this exercise (in my own words):**
 <1–3 sentences – write this yourself.>

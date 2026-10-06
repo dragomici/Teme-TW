@@ -21,8 +21,9 @@ Open `index.html` in a browser (double-click, or right-click → Open with Live 
 
 | # | What I asked the AI (short) | What I changed, or what the AI got wrong |
 |---|-----------------------------|-------------------------------------------|
-| 1 | Asked Claude (Anthropic) to solve all Lab 1 exercises: complete `index.html` and `style.css`. | Claude read the official timetable (`MI_67_I_OrSt1.xlsx`) from the faculty website and built the table for group 10LF442. It guessed the full names of SSI, BDD, IAC, DI, SAP. → <write what you checked/corrected> |
-| 2 | <next question you asked, if any> | <what you changed> |
+| 1 | Asked Claude (Anthropic) to solve all Lab 1 exercises: complete `index.html` and `style.css`. | Claude took the schedule from the official faculty timetable (`MI_67_I_OrSt1.xlsx`) and built the table for group 10LF442. The full names of SSI, BDD, IAC, DI and SAP were guessed from the abbreviations, so they still have to be confirmed. |
+| 2 | Asked where the schedule came from and for the link to the source. | I got the link to the official timetable (mateinfo.unitbv.ro → Studenți → Consultă orarul), so I can compare my table with it. |
+| 3 | Asked how to push the lab to GitHub in several commits. | I cloned my repository `Teme-TW` with Git Bash and made the commits myself. I first forgot `cd Teme-TW`, got "not a git repository", and fixed it by moving `lab01` into the repository. |
 
 **One thing I learned in this exercise (in my own words):**
 <1–3 sentences – write this yourself.>
