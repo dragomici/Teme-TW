@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Drawing of mountains and pine trees on a hiking trail">
+  <rect width="320" height="200" fill="#fef3c7"/>
+  <circle cx="250" cy="50" r="22" fill="#f59e0b"/>
+  <path d="M0 160L80 70l50 50 40-40 80 80H0z" fill="#64748b"/>
+  <path d="M80 70l-18 20h36z" fill="#ffffff"/>
+  <path d="M170 80l-14 14h28z" fill="#ffffff"/>
+  <path d="M150 200L240 100l80 100z" fill="#475569"/>
+  <rect x="0" y="160" width="320" height="40" fill="#136f2b"/>
+  <path d="M30 170l14-34 14 34z" fill="#14532d"/>
+  <path d="M60 175l12-28 12 28z" fill="#14532d"/>
+  <path d="M260 172l14-32 14 32z" fill="#14532d"/>
+  <path d="M110 200q30-24 60-14t70-6" stroke="#fde68a" stroke-width="5" fill="none" stroke-dasharray="10 8"/>
+</svg>

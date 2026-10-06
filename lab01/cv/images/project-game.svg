@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Scene from a 2D platform game with a character, platforms and coins">
+  <rect width="320" height="200" fill="#1e1b4b"/>
+  <circle cx="40" cy="30" r="2" fill="#ffffff"/>
+  <circle cx="120" cy="20" r="1.5" fill="#ffffff"/>
+  <circle cx="210" cy="40" r="2" fill="#ffffff"/>
+  <circle cx="290" cy="25" r="1.5" fill="#ffffff"/>
+  <circle cx="265" cy="45" r="16" fill="#fde68a"/>
+  <rect x="0" y="170" width="320" height="30" fill="#136f2b"/>
+  <rect x="40" y="128" width="80" height="12" rx="3" fill="#7c3aed"/>
+  <rect x="170" y="98" width="90" height="12" rx="3" fill="#7c3aed"/>
+  <circle cx="70" cy="112" r="7" fill="#f59e0b"/>
+  <circle cx="95" cy="112" r="7" fill="#f59e0b"/>
+  <circle cx="215" cy="82" r="7" fill="#f59e0b"/>
+  <rect x="140" y="140" width="22" height="30" rx="4" fill="#ef4444"/>
+  <rect x="144" y="128" width="14" height="14" rx="3" fill="#fca5a5"/>
+  <circle cx="153" cy="134" r="2" fill="#1f2937"/>
+  <text x="12" y="20" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">SCORE 0420</text>
+</svg>

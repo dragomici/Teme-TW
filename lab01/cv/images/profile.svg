@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Illustrated portrait of a student">
+  <rect width="200" height="200" fill="#dbeafe"/>
+  <circle cx="100" cy="82" r="38" fill="#f2c9a5"/>
+  <path d="M62 78c0-26 18-42 40-42s38 15 38 40c-8-12-22-18-40-18s-30 8-38 20z" fill="#3b2a20"/>
+  <circle cx="86" cy="86" r="4" fill="#1f2937"/>
+  <circle cx="114" cy="86" r="4" fill="#1f2937"/>
+  <path d="M88 102q12 9 24 0" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M30 200c4-42 34-64 70-64s66 22 70 64z" fill="#0a66c2"/>
+  <path d="M86 136l14 18 14-18" fill="#ffffff"/>
+</svg>
