@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 1 – My semester</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My semester</h1>
+    <p class="intro">
+      I am a <strong>third-year student</strong> in <em>Applied Computer Science taught in German</em>
+      at the Faculty of Mathematics and Computer Science, Transilvania University of Brașov.
+      This semester I have <strong>six subjects</strong>, and the one I look forward to most is
+      <em>Web Technologies</em>.
+    </p>
+  </header>
+
+  <main>
+    <!-- An image always needs an alt text that describes it. -->
+    <div class="pictures">
+      <img src="images/university.svg" alt="Drawing of a university building" width="320" height="180">
+      <img src="images/laptop.svg" alt="Drawing of a laptop with coloured lines of code on the screen" width="320" height="180">
+    </div>
+
+    <h2>Subjects</h2>
+    <ul class="subject-list">
+      <li class="subject" id="web-tech">Web Technologies <span class="code">(TW)</span></li>
+      <li class="subject" id="info-security">Information Systems Security <span class="code">(SSI)</span></li>
+      <li class="subject" id="distributed-db">Distributed Databases <span class="code">(BDD)</span></li>
+      <li class="subject" id="applied-ai">Applied Artificial Intelligence <span class="code">(IAC)</span></li>
+      <li class="subject" id="industrial-design">Industrial Design <span class="code">(DI)</span></li>
+      <li class="subject" id="sap-erp">SAP ERP Systems <span class="code">(SAP)</span></li>
+    </ul>
+
+    <h2>Schedule</h2>
+    <div class="table-wrapper">
+      <table>
+        <caption>Weekly schedule – year III, semester 1 (2026–2027), group 10LF442</caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">08:00–09:50</th>
+            <td class="lab"><abbr title="Web Technologies">TW</abbr> – lab <span class="room">PII5</span></td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+          </tr>
+          <tr>
+            <th scope="row">10:00–11:50</th>
+            <td class="lab"><abbr title="Information Systems Security">SSI</abbr> – lab <span class="room">PII5</span></td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+            <td class="course"><abbr title="SAP ERP Systems">SAP</abbr> – course <span class="room">PI2</span></td>
+          </tr>
+          <tr>
+            <th scope="row">12:00–13:50</th>
+            <td class="course"><abbr title="Applied Artificial Intelligence">IAC</abbr> – course / seminar <span class="room">PII2 · alternating weeks</span></td>
+            <td class="free">–</td>
+            <td class="lab"><abbr title="Industrial Design">DI</abbr> – lab <span class="room">TI6</span></td>
+            <td class="free">–</td>
+            <td class="seminar"><abbr title="SAP ERP Systems">SAP</abbr> – seminar / lab <span class="room">PII1 / PII3 · alternating weeks</span></td>
+          </tr>
+          <tr>
+            <th scope="row">14:00–15:50</th>
+            <td class="course"><abbr title="Web Technologies">TW</abbr> – course <span class="room">PII1</span></td>
+            <td class="free">–</td>
+            <td class="course"><abbr title="Industrial Design">DI</abbr> – course <span class="room">TI6</span></td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+          </tr>
+          <tr>
+            <th scope="row">16:00–17:50</th>
+            <td class="free">–</td>
+            <td class="course"><abbr title="Information Systems Security">SSI</abbr> – course <span class="room">PIII2</span></td>
+            <td class="lab"><abbr title="Distributed Databases">BDD</abbr> – lab <span class="room">PII7</span></td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+          </tr>
+          <tr>
+            <th scope="row">18:00–19:50</th>
+            <td class="free">–</td>
+            <td class="course"><abbr title="Distributed Databases">BDD</abbr> – course <span class="room">PIII2</span></td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+            <td class="free">–</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="legend">
+      <li><span class="swatch course"></span> Course</li>
+      <li><span class="swatch seminar"></span> Seminar</li>
+      <li><span class="swatch lab"></span> Laboratory</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>
+      Source:
+      <a href="https://mateinfo.unitbv.ro/ro/studenti/consult%C4%83-orarul.html">official timetable of the Faculty of Mathematics and Computer Science (UniTBv)</a>
+    </p>
+    <p><a href="cv/index.html">My CV (Homework 1)</a></p>
+  </footer>
+
+</body>
+</html>

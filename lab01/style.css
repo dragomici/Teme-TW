@@ -1,0 +1,209 @@
+/* Lab 1 – external stylesheet
+   Rule syntax:  selector { property: value; }                       */
+
+/* Element selector: applies to every <body> / <h1> element */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2rem;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+/* TODO 5: style h1 and h2 (colour, bottom border, padding) */
+h1 {
+  color: #0a66c2;
+  margin-top: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 4px solid #0a66c2;
+}
+
+h2 {
+  color: #1f2937;
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #d1d5db;
+}
+
+/* Text formatting in the intro paragraph */
+.intro {
+  max-width: 60ch;
+  font-size: 1.1rem;
+}
+
+strong {
+  color: #0a66c2;
+}
+
+em {
+  color: #92400e;
+}
+
+/* The two images side by side (they wrap on small screens) */
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pictures img {
+  max-width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* TODO 6: class selector – applies to ALL elements with class="subject" */
+.subject-list {
+  max-width: 32rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.subject {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-left: 6px solid #999999;
+  background-color: #ffffff;
+}
+
+.code {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* TODO 7: id selectors – one rule per subject, each with a different colour
+   and a different text formatting */
+#web-tech {
+  border-left-color: #0a66c2;
+  font-weight: bold;
+}
+
+#info-security {
+  border-left-color: #b91c1c;
+  color: #b91c1c;
+}
+
+#distributed-db {
+  border-left-color: #136f2b;
+  font-style: italic;
+}
+
+#applied-ai {
+  border-left-color: #7c3aed;
+  letter-spacing: 0.05em;
+}
+
+#industrial-design {
+  border-left-color: #f59e0b;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+#sap-erp {
+  border-left-color: #0e7490;
+  background-color: #ecfeff;
+  text-decoration: underline dotted #0e7490;
+}
+
+/* TODO 8: table – borders, cell padding, header background */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  max-width: 60rem;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+caption {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #9ca3af;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+
+tbody th {
+  background-color: #e5e7eb;
+  white-space: nowrap;
+}
+
+/* One class per type of class (course / seminar / lab) */
+.course {
+  background-color: #dbeafe;
+}
+
+.seminar {
+  background-color: #fef3c7;
+}
+
+.lab {
+  background-color: #dcfce7;
+}
+
+.free {
+  color: #9ca3af;
+  text-align: center;
+}
+
+.room {
+  display: block;
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+abbr {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Colour legend under the table */
+.legend {
+  padding-left: 0;
+  list-style: none;
+}
+
+.legend li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #9ca3af;
+  vertical-align: middle;
+}
+
+/* Footer with the link to the official timetable */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #d1d5db;
+}
+
+a {
+  color: #0a66c2;
+}
+
+a:hover {
+  color: #084d91;
+}
