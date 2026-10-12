@@ -1,0 +1,491 @@
+/* Student Survey – styles
+   Required:
+   1. Distinct link states: a:link, a:visited, a:hover, a:active
+   2. Navigation links styled differently from content links (header nav a { … })
+   3. Smooth scrolling + scroll-margin-top on the anchor targets
+   4. Visible focus (:focus-visible) for links and form controls
+   5. Tidy fieldsets, legends and labels
+   Use rem for spacing and font sizes (px only for borders and outlines). */
+
+/* ---------- Colours, defined once ---------- */
+:root {
+  --navy: #0b2545;
+  --blue: #0a66c2;
+  --link: #0a66c2;
+  --visited: #6b3fa0;
+  --hover: #b00020;
+  --active: #f59e0b;
+  --amber: #f59e0b;
+  --text: #1f2937;
+  --muted: #5b6570;
+  --border: #dbe2ea;
+  --background: #f4f6fb;
+  --white: #ffffff;
+  --error: #b00020;
+  --success: #136f2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;                    /* browser default: 1rem = 16px */
+}
+
+/* Exercise 3.3: smooth scrolling only for users who did not ask for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* ---------- "Skip to content": hidden until it gets keyboard focus ---------- */
+.skip-link {
+  position: absolute;
+  left: -999rem;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #111111;
+  color: var(--white);
+}
+
+/* ---------- Header and main navigation ---------- */
+.site-header {
+  position: sticky;                   /* stays visible while scrolling */
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--navy), #13315c 60%, var(--blue));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+}
+
+.brand {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Navigation links look like "pills", content links stay underlined text */
+header nav a {
+  display: block;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  color: #e0ecff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+header nav a:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* The page we are on */
+header nav a[aria-current="page"] {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+/* ---------- Main content ---------- */
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.intro {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+/* Content links: L-V-H-A order (link, visited, hover, active) */
+main a:link {
+  color: var(--link);
+}
+
+main a:visited {
+  color: var(--visited);
+}
+
+main a:hover {
+  color: var(--hover);
+  text-decoration-thickness: 2px;
+}
+
+main a:active {
+  color: var(--active);
+}
+
+/* Visible focus for links and form controls (keyboard users) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* ---------- Table of contents ---------- */
+.toc {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 0.3rem solid var(--blue);
+  border-radius: 0.75rem;
+  background-color: var(--white);
+}
+
+.toc-title {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.toc li {
+  margin: 0.2rem 0;
+}
+
+/* ---------- Sections and FAQ answers (the anchor targets) ---------- */
+.section,
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 0.5rem 1.5rem -1rem rgba(11, 37, 69, 0.35);
+  scroll-margin-top: 5rem;            /* keeps the heading below the sticky header */
+}
+
+.section h2,
+.faq-item h2 {
+  margin-top: 0;
+  color: var(--navy);
+  font-size: 1.5rem;
+}
+
+.faq-item h2 {
+  font-size: 1.25rem;
+}
+
+/* No extra space under the last paragraph of a card */
+.section > :last-child,
+.faq-item > :last-child {
+  margin-bottom: 0;
+}
+
+/* Exercise 3.2: highlight the section / FAQ answer reached through a link */
+.section:target,
+.faq-item:target {
+  border-color: var(--amber);
+  background-color: #fffbeb;
+  box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.35);
+}
+
+.back-to-top {
+  font-weight: 600;
+}
+
+code,
+kbd {
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.875rem;
+}
+
+code {
+  background-color: #eef2f7;
+}
+
+kbd {
+  border: 1px solid #b8c2d0;
+  border-bottom-width: 2px;
+  background-color: #f8fafc;
+}
+
+/* ---------- Form ---------- */
+.form-intro {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.req {
+  color: var(--error);
+  font-weight: 700;
+}
+
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.25rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background-color: #fafbff;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--navy);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #b8c2d0;
+  border-radius: 0.6rem;
+  background-color: var(--white);
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Radio buttons and checkboxes as clickable "cards" */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 0.6rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background-color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.choice:hover {
+  border-color: var(--blue);
+}
+
+.choice input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--blue);
+}
+
+/* Exercise 3.1: validation feedback with CSS only.
+   :user-invalid / :user-valid apply only AFTER the user has edited the field. */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--error);
+  background-color: #fff5f6;
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: var(--success);
+  background-color: #f3f9f5;
+}
+
+/* The hint under a wrong field turns red too */
+input:user-invalid + .hint {
+  color: var(--error);
+  font-weight: 600;
+}
+
+/* Buttons row: Submit, Reset, Back to top */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.actions .back-to-top {
+  margin-left: auto;
+}
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: 0.6rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--navy);
+}
+
+.btn-secondary {
+  border-color: #b8c2d0;
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text);
+}
+
+/* ---------- Resources ---------- */
+.resource-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.resource-list li {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 0.25rem solid var(--blue);
+  border-radius: 0.75rem;
+}
+
+.resource-list a {
+  font-weight: 600;
+}
+
+.resource-list p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  background-color: var(--navy);
+  color: #cbd5e1;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+  color: #fde68a;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.site-footer a:active {
+  color: var(--amber);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 40rem) {
+  .header-inner {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .section,
+  .faq-item {
+    padding: 1.25rem;
+    scroll-margin-top: 7.5rem;        /* the header is taller when the menu wraps */
+  }
+
+  .actions .back-to-top {
+    margin-left: 0;
+  }
+}
