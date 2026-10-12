@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ – Student Survey</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Same header on index.html and faq.html -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Student Survey</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#survey">Survey</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Frequently asked questions</h1>
+    <p class="intro">Short answers about the survey. Click a question to jump to its answer.</p>
+
+    <!-- Table of contents: one link per question -->
+    <nav class="toc" aria-label="Questions">
+      <h2 class="toc-title">Questions</h2>
+      <ol>
+        <li><a href="#q1">Who can take part in the survey?</a></li>
+        <li><a href="#q2">What happens with my answers?</a></li>
+        <li><a href="#q3">Which fields are required?</a></li>
+        <li><a href="#q4">Can I fill in the form using only the keyboard?</a></li>
+        <li><a href="#q5">Can I change my answers?</a></li>
+      </ol>
+    </nav>
+
+    <section id="q1" class="faq-item">
+      <h2>Who can take part in the survey?</h2>
+      <p>
+        Every student of the Faculty of Mathematics and Computer Science, from any year of study,
+        bachelor or master. If you are ready, <a href="index.html#survey">go directly to the survey</a>.
+      </p>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+
+    <section id="q2" class="faq-item">
+      <h2>What happens with my answers?</h2>
+      <p>
+        Nothing is stored. The form has no server yet: when you press <em>Submit</em>, the browser
+        only reloads the page and shows your answers in the address bar (this is what
+        <code>method="get"</code> does). A real application would also check the data on the server.
+      </p>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+
+    <section id="q3" class="faq-item">
+      <h2>Which fields are required?</h2>
+      <p>
+        Name (at least 3 characters), email, year of study and the preferred session time.
+        If one of them is missing, the browser stops the form and tells you what to fix.
+        The Student ID is optional, but if you fill it in it must have exactly 6 digits.
+        See the <a href="index.html#survey">survey form</a>.
+      </p>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+
+    <section id="q4" class="faq-item">
+      <h2>Can I fill in the form using only the keyboard?</h2>
+      <p>
+        Yes. Press <kbd>Tab</kbd> to move to the next field and <kbd>Shift</kbd> + <kbd>Tab</kbd> to go back.
+        Use the arrow keys to choose a session time, <kbd>Space</kbd> to tick a topic and
+        <kbd>Enter</kbd> to submit. The field you are on always has an orange outline.
+      </p>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+
+    <section id="q5" class="faq-item">
+      <h2>Can I change my answers?</h2>
+      <p>
+        Yes. Before submitting, press <em>Reset</em> to clear the whole form. After submitting,
+        simply fill in the form again – the newest answers count.
+      </p>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+  </main>
+
+  <!-- Same footer on index.html and faq.html -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Student Survey · Web Technologies, IAG III · Transilvania University of Brașov</p>
+    <p><a href="index.html#overview">Overview</a> · <a href="faq.html">FAQ</a> · <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>

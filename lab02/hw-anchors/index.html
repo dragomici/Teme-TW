@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Survey</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Same header on index.html and faq.html -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Student Survey</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html#survey">Survey</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Student Survey</h1>
+    <p class="intro">Help us plan the Web Technologies labs of this semester. It takes about three minutes.</p>
+
+    <!-- Table of contents: internal links to the sections of this page -->
+    <nav class="toc" aria-label="On this page">
+      <h2 class="toc-title">On this page</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#survey">Survey</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ol>
+    </nav>
+
+    <section id="overview" class="section">
+      <h2>Overview</h2>
+      <p>
+        This survey collects the opinion of students from the Faculty of Mathematics and Computer Science
+        about the Web Technologies labs. We want to know <strong>when</strong> you prefer to have extra
+        sessions and <strong>which topics</strong> you would like to practise more.
+      </p>
+      <p>
+        The answers are used only to plan the labs. Not sure about something? Read the
+        <a href="faq.html#q2">question about your data</a> in the FAQ.
+      </p>
+    </section>
+
+    <section id="survey" class="section">
+      <h2>Survey</h2>
+      <p class="form-intro">Fields marked with <span class="req" aria-hidden="true">*</span> are required.</p>
+
+      <!-- No action (there is no server yet): the data appears in the URL after Submit -->
+      <form method="get">
+        <fieldset>
+          <legend>About you</legend>
+
+          <div class="field">
+            <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" required minlength="3" autocomplete="name" aria-describedby="name-hint">
+            <small class="hint" id="name-hint">At least 3 characters.</small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-hint">
+            <small class="hint" id="email-hint">For example name@student.unitbv.ro</small>
+          </div>
+
+          <div class="field">
+            <label for="year">Year of study <span class="req" aria-hidden="true">*</span></label>
+            <select id="year" name="year" required>
+              <option value="">– Choose your year –</option>
+              <option value="1">Year 1</option>
+              <option value="2">Year 2</option>
+              <option value="3">Year 3</option>
+              <option value="master">Master</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="student-id">Student ID (optional)</label>
+            <input id="student-id" name="student-id" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+                   title="Exactly 6 digits" aria-describedby="student-id-hint">
+            <small class="hint" id="student-id-hint">Exactly 6 digits, for example 123456.</small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred session time <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choices">
+            <!-- required on one radio button makes the whole group required -->
+            <label class="choice"><input type="radio" name="session" value="morning" required> Morning (08:00–12:00)</label>
+            <label class="choice"><input type="radio" name="session" value="afternoon"> Afternoon (12:00–16:00)</label>
+            <label class="choice"><input type="radio" name="session" value="evening"> Evening (16:00–20:00)</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Topics you are interested in</legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="topics" value="html-css"> HTML &amp; CSS</label>
+            <label class="choice"><input type="checkbox" name="topics" value="javascript"> JavaScript</label>
+            <label class="choice"><input type="checkbox" name="topics" value="accessibility"> Accessibility</label>
+            <label class="choice"><input type="checkbox" name="topics" value="git"> Git &amp; GitHub</label>
+            <label class="choice"><input type="checkbox" name="topics" value="php"> PHP &amp; databases</label>
+            <label class="choice"><input type="checkbox" name="topics" value="frameworks"> Frameworks (Bootstrap, React)</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Feedback</legend>
+          <div class="field">
+            <label for="feedback">What should we improve in the labs?</label>
+            <textarea id="feedback" name="feedback" rows="5" maxlength="500" aria-describedby="feedback-hint"></textarea>
+            <small class="hint" id="feedback-hint">Optional, at most 500 characters.</small>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+          <a class="back-to-top" href="#top">Back to top</a>
+        </div>
+      </form>
+    </section>
+
+    <section id="resources" class="section">
+      <h2>Resources</h2>
+      <p>Useful pages if you want to learn more about forms and links:</p>
+      <ul class="resource-list">
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms" target="_blank" rel="noopener">MDN – Web forms (opens in a new tab)</a>
+          <p>A complete guide to form controls and validation.</p>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/forms/" target="_blank" rel="noopener">W3C – Forms tutorial (opens in a new tab)</a>
+          <p>How to make forms accessible: labels, groups and instructions.</p>
+        </li>
+        <li>
+          <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup Validator (opens in a new tab)</a>
+          <p>Check that your HTML has no errors before you submit it.</p>
+        </li>
+      </ul>
+      <p><a href="#top">Back to top</a></p>
+    </section>
+  </main>
+
+  <!-- Same footer on index.html and faq.html -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Student Survey · Web Technologies, IAG III · Transilvania University of Brașov</p>
+    <p><a href="index.html#overview">Overview</a> · <a href="faq.html">FAQ</a> · <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>
