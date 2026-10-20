@@ -1,0 +1,51 @@
+/* Lab 3 – camp menu */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  margin: 2rem;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+nav a {
+  color: #2e7d32;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+caption {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+th,
+td {
+  border: 1px solid #8a8a8a;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #e8f5e9;
+}
+
+.trip {
+  background-color: #fff3cd;
+  font-weight: bold;
+}
+
+.special {
+  background-color: #fde2e4;
+}
+
+.note {
+  font-size: 0.85rem;
+  font-style: italic;
+}
