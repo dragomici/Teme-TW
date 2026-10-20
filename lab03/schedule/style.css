@@ -1,0 +1,62 @@
+/* Lab 3 – activity schedule (homework) */
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #1f2a44;
+  margin: 2rem;
+}
+
+h1 {
+  color: #283593;
+}
+
+nav a {
+  color: #283593;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+caption {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #283593;
+  padding: 0.75rem;
+}
+
+th,
+td {
+  border: 1px solid #7986cb;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+th {
+  background-color: #c5cae9;
+}
+
+/* kinds of activity */
+.science {
+  background-color: #d0f0fd;
+}
+
+.sport {
+  background-color: #dcedc8;
+}
+
+.art {
+  background-color: #fde2e4;
+}
+
+.meal {
+  background-color: #fff3cd;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: left;
+}
