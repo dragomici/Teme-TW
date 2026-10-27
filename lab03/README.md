@@ -1,6 +1,6 @@
 # Lab 03 – HTML Tables and Basic CSS: Summer Camp Menu
 
-**Student:** <first name, last name> · **Group:** <group> · **Date:** 2026-10-20
+**Student:** Dragomir David Ștefan · **Group:** 10LF442 (IAG III) · **Date:** 2026-10-20
 
 ## What I built
 - `menu/` – the guided exercise: the Camp Pinewood weekly menu with two header rows, merged cells (`rowspan` for the fruit salad and the barbecue, `colspan` for the weekend), a `<tfoot>` with the allergens and an external stylesheet.
