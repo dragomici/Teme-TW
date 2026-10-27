@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 4 – Bootstrap demo</title>
+  <!-- Bootstrap CSS (version pinned) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- STEP 1 – NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">David Dragomir</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- STEP 2 – UTILITIES -->
+  <div class="text-center bg-primary-subtle p-5 mt-2 rounded-3">
+    <p class="fw-bold text-primary mb-0">Welcome to our lab!</p>
+  </div>
+
+  <!-- STEP 3 – GRID: container > row > col -->
+  <!-- a) 12 columns: 3 + 9 = 12 -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3 border bg-body-secondary">Left (3 of 12)</div>
+      <div class="col-md-9 border">Right (9 of 12)</div>
+    </div>
+  </div>
+
+  <!-- b) 1 per row on phones, 2 from md, 3 from lg -->
+  <div class="container mt-4">
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 1</div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 2</div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 3</div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 4</div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 5</div></div>
+      <div class="col-12 col-md-6 col-lg-4"><div class="border p-3">Box 6</div></div>
+    </div>
+  </div>
+
+  <!-- c) stacked on phones and tablets, side by side from lg -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="h4">About the camp</h2>
+        <p>Camp Pinewood is a summer camp for children aged 8 to 12, with sport, art and trips into the forest.</p>
+      </div>
+      <div class="col-lg-4">
+        <h2 class="h4">Bring with you</h2>
+        <ul>
+          <li>Swimsuit and towel</li>
+          <li>Hat and water bottle</li>
+          <li>Comfortable shoes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 – CARDS: 1 per row on phones, 3 per row from md -->
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/laptop.svg" class="card-img-top" alt="Drawing of a laptop">
+          <div class="card-body">
+            <h2 class="card-title h5">Lab 1 – HTML and CSS</h2>
+            <p class="card-text">The page skeleton, a first table and an external stylesheet.</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/laptop.svg" class="card-img-top" alt="Drawing of a laptop">
+          <div class="card-body">
+            <h2 class="card-title h5">Lab 2 – Links and forms</h2>
+            <p class="card-text">Navigation between pages, link states and form validation.</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/laptop.svg" class="card-img-top" alt="Drawing of a laptop">
+          <div class="card-body">
+            <h2 class="card-title h5">Lab 3 – Tables</h2>
+            <p class="card-text">A camp menu and an activity schedule with merged cells.</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 – TABLE: the camp menu from Lab 3 with Bootstrap classes -->
+  <div class="container my-4">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle caption-top">
+        <caption>Weekly menu – 6 to 12 July</caption>
+
+        <thead class="table-success">
+          <tr>
+            <th scope="col" rowspan="2">Day</th>
+            <th scope="colgroup" colspan="2">Morning</th>
+            <th scope="col" rowspan="2">Lunch</th>
+            <th scope="colgroup" colspan="2">Afternoon and evening</th>
+          </tr>
+          <tr>
+            <th scope="col">Breakfast</th>
+            <th scope="col">Snack</th>
+            <th scope="col">Snack</th>
+            <th scope="col">Dinner</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td>Pancakes with honey</td>
+            <td rowspan="3">Fruit salad</td>
+            <td>Chicken soup and rice</td>
+            <td>Yogurt and biscuits</td>
+            <td>Pasta with tomato sauce</td>
+          </tr>
+          <tr>
+            <th scope="row">Tuesday</th>
+            <td>Omelette and toast</td>
+            <td>Vegetable stew and polenta</td>
+            <td>Apple pie</td>
+            <td>Cheese sandwiches and salad</td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td>Cereal with milk</td>
+            <td>Fish sticks and mashed potatoes</td>
+            <td>Ice cream</td>
+            <td>Vegetable pizza</td>
+          </tr>
+          <tr>
+            <th scope="row">Thursday</th>
+            <td>Bread, butter and jam</td>
+            <td>Carrot sticks</td>
+            <td>Meatballs and potatoes</td>
+            <td>Watermelon</td>
+            <td rowspan="2" class="table-warning">Barbecue at the campfire</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>Croissants and milk</td>
+            <td>Banana</td>
+            <td>Pasta bolognese</td>
+            <td>Cookies</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td colspan="5" class="table-warning fw-bold text-center">Trip day – packed breakfast, picnic lunch in the forest, dinner back at the camp</td>
+          </tr>
+          <tr>
+            <th scope="row">Sunday</th>
+            <td colspan="2">Family brunch</td>
+            <td>Grilled chicken and salad</td>
+            <td colspan="2" class="table-warning">Goodbye cake and departure</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="6" class="fst-italic small">Allergens: gluten, milk, eggs, fish. Tell the camp nurse about any allergy before the first meal.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript (needed for the collapsing navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
