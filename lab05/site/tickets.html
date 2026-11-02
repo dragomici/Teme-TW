@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ticket prices for the Moonlake Jazz Festival 2027: day tickets, festival passes and camping.">
+  <title>Moonlake Jazz Festival – Tickets</title>
+  <!-- W3.CSS (version 6) and then my own stylesheet – mine always comes after the framework -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: the same on every page. id="top" is the target of all "Back to top" links. -->
+  <header class="site-header w3-container w3-padding-16" id="top">
+    <div class="equalizer" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h1 class="hero-title">Moonlake Jazz Festival</h1>
+    <p class="tagline">Three nights of jazz on the shore of Lake Moonlake · 16–18 July 2027</p>
+  </header>
+
+  <!-- NAVIGATION: one link per page. The CURRENT page has w3-indigo and aria-current="page". -->
+  <nav class="main-nav w3-bar w3-light-grey" aria-label="Main navigation">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="lineup.html" class="w3-bar-item w3-button">Line-up</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="tickets.html" class="w3-bar-item w3-button w3-indigo" aria-current="page">Tickets</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  </nav>
+
+  <main class="w3-container">
+
+    <section class="fade-in" aria-labelledby="prices-title">
+      <h2 id="prices-title">Tickets and prices</h2>
+      <p class="lead-text">Early-bird prices are valid for reservations until 31 May 2027.
+        Students show a valid student card at the entrance.</p>
+      <!-- MERGED CELLS: colspan joins cells side by side, rowspan joins cells one below the other.
+           w3-responsive lets the table scroll sideways on a phone. -->
+      <div class="w3-responsive">
+        <table class="w3-table w3-bordered w3-striped price-table">
+          <caption>Ticket prices 2027, per person, in lei</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Ticket</th>
+              <th scope="col" rowspan="2">Valid for</th>
+              <th scope="colgroup" colspan="2">Early bird (until 31 May)</th>
+              <th scope="colgroup" colspan="2">Regular price</th>
+            </tr>
+            <tr>
+              <th scope="col">Adult</th>
+              <th scope="col">Student</th>
+              <th scope="col">Adult</th>
+              <th scope="col">Student</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Day ticket</th>
+              <td>Friday</td>
+              <td>120</td>
+              <td>80</td>
+              <td>150</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>140</td>
+              <td>90</td>
+              <td>170</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>110</td>
+              <td>70</td>
+              <td>140</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <th scope="rowgroup" rowspan="2">Festival pass</th>
+              <td>All three days</td>
+              <td>300</td>
+              <td>200</td>
+              <td>380</td>
+              <td>260</td>
+            </tr>
+            <tr>
+              <td>All three days + camping</td>
+              <td>380</td>
+              <td>260</td>
+              <td>460</td>
+              <td>340</td>
+            </tr>
+            <tr>
+              <th scope="row">Children under 12</th>
+              <td colspan="5">Free entry together with an adult ticket</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fade-in" aria-labelledby="included-title">
+      <h2 id="included-title">What is included</h2>
+      <ul class="w3-ul w3-card w3-white w3-round-large included-list">
+        <li>Entry to both stages on the days of your ticket</li>
+        <li>All workshops – see the <a href="lineup.html#workshops">workshop times</a></li>
+        <li>Free shuttle bus from Moonlake railway station</li>
+        <li>Camping only with the “All three days + camping” pass</li>
+      </ul>
+    </section>
+
+    <section class="fade-in" aria-labelledby="buy-title">
+      <h2 id="buy-title">How to buy</h2>
+      <p>Reserve your tickets by e-mail and pay at the ticket desk when you arrive (cash or card).</p>
+      <p class="button-row">
+        <a href="mailto:info@example.com?subject=Ticket%20reservation" class="w3-button w3-green w3-round-large btn-anim">Reserve by e-mail</a>
+        <a href="contact.html" class="w3-button w3-white w3-border w3-round-large btn-anim">Opening hours of the ticket desk</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: e-mail link (mailto:), external links in a NEW tab (always with rel), Back to top -->
+  <footer class="site-footer w3-container w3-padding-16">
+    <p>Moonlake Jazz Festival 2027 · North Shore, Lake Moonlake ·
+      <a href="mailto:info@example.com">info@example.com</a></p>
+    <p>Read more:
+      <a href="https://en.wikipedia.org/wiki/Jazz" target="_blank" rel="noopener noreferrer">Jazz on Wikipedia (new tab)</a> ·
+      <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap (new tab)</a></p>
+    <p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></p>
+  </footer>
+
+</body>
+</html>
