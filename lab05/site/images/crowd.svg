@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="crowd-title">
+  <title id="crowd-title">The audience in front of the lit stage, some people raise their hands</title>
+  <defs>
+    <radialGradient id="crowd-glow" cx="0.5" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="0.35" stop-color="#f5c451"/>
+      <stop offset="0.7" stop-color="#e76f51"/>
+      <stop offset="1" stop-color="#3b2a6b"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#crowd-glow)"/>
+  <!-- edge of the stage -->
+  <rect y="150" width="400" height="12" fill="#3b2a6b" fill-opacity="0.55"/>
+  <!-- back row -->
+  <g fill="#4a3470">
+    <circle cx="20" cy="196" r="13"/>
+    <circle cx="62" cy="190" r="13"/>
+    <circle cx="104" cy="198" r="13"/>
+    <circle cx="146" cy="192" r="13"/>
+    <circle cx="188" cy="196" r="13"/>
+    <circle cx="230" cy="190" r="13"/>
+    <circle cx="272" cy="197" r="13"/>
+    <circle cx="314" cy="191" r="13"/>
+    <circle cx="356" cy="196" r="13"/>
+    <circle cx="396" cy="192" r="13"/>
+    <ellipse cx="20" cy="226" rx="22" ry="14"/>
+    <ellipse cx="62" cy="220" rx="22" ry="14"/>
+    <ellipse cx="104" cy="228" rx="22" ry="14"/>
+    <ellipse cx="146" cy="222" rx="22" ry="14"/>
+    <ellipse cx="188" cy="226" rx="22" ry="14"/>
+    <ellipse cx="230" cy="220" rx="22" ry="14"/>
+    <ellipse cx="272" cy="227" rx="22" ry="14"/>
+    <ellipse cx="314" cy="221" rx="22" ry="14"/>
+    <ellipse cx="356" cy="226" rx="22" ry="14"/>
+    <ellipse cx="396" cy="222" rx="22" ry="14"/>
+    <rect y="226" width="400" height="74"/>
+  </g>
+  <!-- front row with raised hands and a phone light -->
+  <g fill="#1a1f3d">
+    <circle cx="40" cy="236" r="17"/>
+    <circle cx="100" cy="230" r="17"/>
+    <circle cx="160" cy="238" r="17"/>
+    <circle cx="220" cy="232" r="17"/>
+    <circle cx="280" cy="236" r="17"/>
+    <circle cx="340" cy="230" r="17"/>
+    <ellipse cx="40" cy="272" rx="30" ry="20"/>
+    <ellipse cx="100" cy="266" rx="30" ry="20"/>
+    <ellipse cx="160" cy="274" rx="30" ry="20"/>
+    <ellipse cx="220" cy="268" rx="30" ry="20"/>
+    <ellipse cx="280" cy="272" rx="30" ry="20"/>
+    <ellipse cx="340" cy="266" rx="30" ry="20"/>
+    <rect y="272" width="400" height="28"/>
+    <circle cx="66" cy="182" r="6"/>
+    <circle cx="246" cy="178" r="6"/>
+    <circle cx="368" cy="186" r="6"/>
+  </g>
+  <g stroke="#1a1f3d" stroke-width="9" stroke-linecap="round">
+    <line x1="86" y1="258" x2="67" y2="188"/>
+    <line x1="234" y1="258" x2="245" y2="184"/>
+    <line x1="354" y1="256" x2="367" y2="192"/>
+  </g>
+  <rect x="363" y="166" width="9" height="15" rx="2" fill="#fff8d6"/>
+</svg>

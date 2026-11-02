@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="stage-title">
+  <title id="stage-title">The main stage at night, three spotlights shine on a trio</title>
+  <defs>
+    <linearGradient id="stage-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141833"/>
+      <stop offset="1" stop-color="#3b2a6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#stage-sky)"/>
+  <!-- stars and moon -->
+  <g fill="#ffffff">
+    <circle cx="28" cy="26" r="1.6"/>
+    <circle cx="92" cy="54" r="1.2"/>
+    <circle cx="156" cy="20" r="1.5"/>
+    <circle cx="238" cy="44" r="1.2"/>
+    <circle cx="262" cy="16" r="1.4"/>
+    <circle cx="378" cy="104" r="1.4"/>
+    <circle cx="44" cy="118" r="1.2"/>
+  </g>
+  <circle cx="332" cy="52" r="24" fill="#f5e6a8"/>
+  <circle cx="324" cy="46" r="5" fill="#e6d48a"/>
+  <circle cx="341" cy="61" r="4" fill="#e6d48a"/>
+  <!-- spotlight beams -->
+  <g fill="#f5c451">
+    <polygon points="120,104 66,238 174,238" fill-opacity="0.22"/>
+    <polygon points="200,104 146,238 254,238" fill-opacity="0.3"/>
+    <polygon points="280,104 226,238 334,238" fill-opacity="0.22"/>
+  </g>
+  <!-- stage frame and lamps -->
+  <g fill="#0d0f1f">
+    <rect x="66" y="86" width="268" height="14" rx="2"/>
+    <rect x="70" y="100" width="10" height="138"/>
+    <rect x="320" y="100" width="10" height="138"/>
+  </g>
+  <g fill="#f5c451">
+    <rect x="113" y="98" width="14" height="8" rx="2"/>
+    <rect x="193" y="98" width="14" height="8" rx="2"/>
+    <rect x="273" y="98" width="14" height="8" rx="2"/>
+  </g>
+  <!-- the trio: bass player, singer, pianist -->
+  <g fill="#0d0f1f">
+    <circle cx="118" cy="168" r="9"/>
+    <rect x="110" y="178" width="16" height="60" rx="6"/>
+    <ellipse cx="138" cy="214" rx="12" ry="22"/>
+    <rect x="136.5" y="158" width="3" height="40"/>
+    <circle cx="200" cy="162" r="9"/>
+    <rect x="192" y="172" width="16" height="66" rx="6"/>
+    <rect x="216" y="178" width="2" height="60"/>
+    <circle cx="217" cy="176" r="3"/>
+    <circle cx="268" cy="178" r="9"/>
+    <rect x="260" y="188" width="16" height="32" rx="6"/>
+    <rect x="248" y="204" width="56" height="34" rx="3"/>
+  </g>
+  <!-- stage floor and the lake with reflections -->
+  <rect x="50" y="238" width="300" height="12" fill="#0d0f1f"/>
+  <rect y="250" width="400" height="50" fill="#1d3557"/>
+  <g stroke="#f5c451" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round">
+    <line x1="150" y1="264" x2="250" y2="264"/>
+    <line x1="168" y1="276" x2="232" y2="276"/>
+    <line x1="184" y1="288" x2="216" y2="288"/>
+  </g>
+</svg>

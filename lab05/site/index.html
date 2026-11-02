@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moonlake Jazz Festival – three nights of open-air jazz on the shore of Lake Moonlake, 16–18 July 2027.">
+  <title>Moonlake Jazz Festival – Home</title>
+  <!-- W3.CSS (version 6) and then my own stylesheet – mine always comes after the framework -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: the same on every page. id="top" is the target of all "Back to top" links. -->
+  <header class="site-header w3-container w3-padding-16" id="top">
+    <div class="equalizer" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h1 class="hero-title">Moonlake Jazz Festival</h1>
+    <p class="tagline">Three nights of jazz on the shore of Lake Moonlake · 16–18 July 2027</p>
+  </header>
+
+  <!-- NAVIGATION: one link per page. The CURRENT page has w3-indigo and aria-current="page". -->
+  <nav class="main-nav w3-bar w3-light-grey" aria-label="Main navigation">
+    <a href="index.html" class="w3-bar-item w3-button w3-indigo" aria-current="page">Home</a>
+    <a href="lineup.html" class="w3-bar-item w3-button">Line-up</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="tickets.html" class="w3-bar-item w3-button">Tickets</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  </nav>
+
+  <main class="w3-container">
+
+    <section class="fade-in" aria-labelledby="intro-title">
+      <h2 id="intro-title">Jazz under the stars</h2>
+      <p class="lead-text">For the fifth summer in a row, the Moonlake Jazz Festival brings jazz to the shore of
+        Lake Moonlake: two stages, ten concerts, free workshops and a camping area right by the water.
+        Bring a blanket, find a spot on the grass and enjoy the music under the stars.</p>
+      <p class="button-row">
+        <!-- the most important button pulses (@keyframes pulse in style.css) -->
+        <a href="tickets.html" class="w3-button w3-amber w3-round-large btn-anim pulse">Buy tickets</a>
+        <a href="lineup.html" class="w3-button w3-indigo w3-round-large btn-anim">See the line-up</a>
+      </p>
+    </section>
+
+    <!-- Each card links to a SECTION of another page: lineup.html#friday = page + id -->
+    <section class="fade-in" aria-labelledby="days-title">
+      <h2 id="days-title">Three days, three moods</h2>
+      <div class="w3-row-padding card-row">
+        <div class="w3-col m4">
+          <article class="w3-card w3-white w3-round-large card-lift">
+            <img src="images/stage-night.svg" alt="The main stage at night, three spotlights shine on a trio" class="card-photo">
+            <div class="w3-container">
+              <h3>Friday – Opening night</h3>
+              <p>Calm piano trios while the sun goes down, then the Moonlake Big Band plays swing until midnight.</p>
+              <p><a href="lineup.html#friday">Friday programme</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="w3-col m4">
+          <article class="w3-card w3-white w3-round-large card-lift">
+            <img src="images/crowd.svg" alt="The audience in front of the lit stage, some people raise their hands" class="card-photo">
+            <div class="w3-container">
+              <h3>Saturday – Swing day</h3>
+              <p>Workshops in the morning, swing dancing in the evening and a jam session late at night.</p>
+              <p><a href="lineup.html#saturday">Saturday programme</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="w3-col m4">
+          <article class="w3-card w3-white w3-round-large card-lift">
+            <img src="images/lake-sunset.svg" alt="Sunset over the lake with hills and a small sailing boat" class="card-photo">
+            <div class="w3-container">
+              <h3>Sunday – Family day</h3>
+              <p>Jazz brunch on the shore, a drum workshop for children and fireworks at the closing concert.</p>
+              <p><a href="lineup.html#sunday">Sunday programme</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAMED TARGET: target="viewer" is the NAME of the iframe, so these pages open INSIDE the frame
+         (with an id instead of a name they would open as a new page) -->
+    <section id="guide" class="fade-in" aria-labelledby="guide-title">
+      <h2 id="guide-title">Festival guide</h2>
+      <p>Choose a topic – the page opens in the frame below and you stay on the home page.</p>
+      <ul class="guide-links">
+        <li><a href="pages/map.html" target="viewer" class="w3-button w3-white w3-border w3-round-large btn-anim">Festival map</a></li>
+        <li><a href="pages/food.html" target="viewer" class="w3-button w3-white w3-border w3-round-large btn-anim">Food and drinks</a></li>
+        <li><a href="pages/faq.html" target="viewer" class="w3-button w3-white w3-border w3-round-large btn-anim">Questions and answers</a></li>
+      </ul>
+      <iframe name="viewer" src="pages/map.html" title="Festival guide" class="guide-frame"></iframe>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: e-mail link (mailto:), external links in a NEW tab (always with rel), Back to top -->
+  <footer class="site-footer w3-container w3-padding-16">
+    <p>Moonlake Jazz Festival 2027 · North Shore, Lake Moonlake ·
+      <a href="mailto:info@example.com">info@example.com</a></p>
+    <p>Read more:
+      <a href="https://en.wikipedia.org/wiki/Jazz" target="_blank" rel="noopener noreferrer">Jazz on Wikipedia (new tab)</a> ·
+      <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap (new tab)</a></p>
+    <p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></p>
+  </footer>
+
+</body>
+</html>

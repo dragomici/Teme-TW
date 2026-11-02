@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="map-title">
+  <title id="map-title">Festival map: the entrance and the info point are at the bottom, the main stage is on the left, the food court in the middle, the lake stage and the camping area are on the lake shore on the right</title>
+  <rect width="600" height="400" fill="#dcefd8"/>
+  <!-- the lake -->
+  <path d="M600 0 H430 C380 60 400 140 450 190 C500 240 470 330 520 400 H600 Z" fill="#9fd3e6"/>
+  <text x="530" y="200" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="#1d3557" text-anchor="middle">Lake Moonlake</text>
+  <!-- paths -->
+  <g fill="none" stroke="#c8b48a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 360 V250"/>
+    <path d="M300 250 H140 V170"/>
+    <path d="M300 250 V170"/>
+    <path d="M300 250 H420 V140"/>
+    <path d="M420 250 V290"/>
+    <path d="M150 360 H250"/>
+  </g>
+  <!-- areas -->
+  <g font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <rect x="60" y="70" width="160" height="100" rx="10" fill="#3b2a6b"/>
+    <text x="140" y="126" fill="#ffffff">Main stage</text>
+    <rect x="240" y="110" width="120" height="60" rx="10" fill="#f4a261"/>
+    <text x="300" y="145" fill="#1a1f3d">Food court</text>
+    <rect x="370" y="88" width="100" height="52" rx="10" fill="#264653"/>
+    <text x="420" y="119" fill="#ffffff">Lake stage</text>
+    <rect x="365" y="290" width="110" height="60" rx="10" fill="#2a9d8f"/>
+    <text x="420" y="325" fill="#ffffff">Camping</text>
+    <rect x="196" y="280" width="84" height="40" rx="8" fill="#f5c451"/>
+    <text x="238" y="305" fill="#1a1f3d">Info point</text>
+    <rect x="250" y="342" width="100" height="40" rx="8" fill="#1a1f3d"/>
+    <text x="300" y="367" fill="#ffffff">Entrance</text>
+    <rect x="40" y="330" width="110" height="56" rx="8" fill="#757575"/>
+    <text x="95" y="363" fill="#ffffff">Parking P1</text>
+  </g>
+  <!-- north arrow -->
+  <g fill="#1a1f3d" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <polygon points="30,14 40,40 30,34 20,40"/>
+    <text x="30" y="58">N</text>
+  </g>
+</svg>

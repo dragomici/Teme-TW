@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="lake-title">
+  <title id="lake-title">Sunset over the lake with hills and a small sailing boat</title>
+  <defs>
+    <linearGradient id="lake-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a3d7a"/>
+      <stop offset="0.55" stop-color="#e76f51"/>
+      <stop offset="1" stop-color="#f4a261"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="190" fill="url(#lake-sky)"/>
+  <!-- the sun goes down between two hills -->
+  <circle cx="200" cy="176" r="40" fill="#ffd166"/>
+  <polygon points="0,190 0,130 50,108 110,146 150,172 250,172 300,124 350,140 400,118 400,190" fill="#3b2a6b"/>
+  <!-- the lake and the reflection of the sun -->
+  <rect y="186" width="400" height="114" fill="#264653"/>
+  <g stroke="#ffd166" stroke-linecap="round">
+    <line x1="160" y1="200" x2="240" y2="200" stroke-width="4"/>
+    <line x1="172" y1="214" x2="228" y2="214" stroke-width="3"/>
+    <line x1="184" y1="228" x2="216" y2="228" stroke-width="3"/>
+    <line x1="192" y1="242" x2="208" y2="242" stroke-width="2"/>
+  </g>
+  <!-- small sailing boat -->
+  <g fill="#141833">
+    <polygon points="290,232 340,232 330,244 300,244"/>
+    <rect x="313" y="196" width="2" height="36"/>
+    <polygon points="316,198 316,228 338,228"/>
+    <polygon points="311,204 311,228 296,228"/>
+  </g>
+</svg>

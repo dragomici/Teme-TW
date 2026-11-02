@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="piano-title">
+  <title id="piano-title">Close-up of piano keys with golden music notes above them</title>
+  <rect width="400" height="300" fill="#3e2a1f"/>
+  <rect y="96" width="400" height="10" fill="#7a1f2b"/>
+  <!-- white keys -->
+  <g fill="#fafafa" stroke="#c9c9c9" stroke-width="2">
+    <rect x="8" y="106" width="38" height="186" rx="3"/>
+    <rect x="47" y="106" width="38" height="186" rx="3"/>
+    <rect x="86" y="106" width="38" height="186" rx="3"/>
+    <rect x="125" y="106" width="38" height="186" rx="3"/>
+    <rect x="164" y="106" width="38" height="186" rx="3"/>
+    <rect x="203" y="106" width="38" height="186" rx="3"/>
+    <rect x="242" y="106" width="38" height="186" rx="3"/>
+    <rect x="281" y="106" width="38" height="186" rx="3"/>
+    <rect x="320" y="106" width="38" height="186" rx="3"/>
+    <rect x="359" y="106" width="38" height="186" rx="3"/>
+  </g>
+  <!-- black keys -->
+  <g fill="#111111">
+    <rect x="35" y="106" width="22" height="112" rx="2"/>
+    <rect x="74" y="106" width="22" height="112" rx="2"/>
+    <rect x="152" y="106" width="22" height="112" rx="2"/>
+    <rect x="191" y="106" width="22" height="112" rx="2"/>
+    <rect x="230" y="106" width="22" height="112" rx="2"/>
+    <rect x="308" y="106" width="22" height="112" rx="2"/>
+    <rect x="347" y="106" width="22" height="112" rx="2"/>
+  </g>
+  <!-- music notes -->
+  <g fill="#f5c451">
+    <ellipse cx="120" cy="66" rx="11" ry="8" transform="rotate(-20 120 66)"/>
+    <rect x="129" y="18" width="3" height="46"/>
+    <ellipse cx="170" cy="60" rx="11" ry="8" transform="rotate(-20 170 60)"/>
+    <rect x="179" y="12" width="3" height="46"/>
+    <polygon points="129,18 182,12 182,20 129,26"/>
+    <ellipse cx="270" cy="72" rx="11" ry="8" transform="rotate(-20 270 72)"/>
+    <rect x="279" y="26" width="3" height="44"/>
+    <path d="M282 26 q 16 8 10 26 q -2 -14 -10 -16 z"/>
+  </g>
+</svg>

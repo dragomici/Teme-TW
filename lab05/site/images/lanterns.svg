@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="lights-title">
+  <title id="lights-title">Coloured string lights above two food stands with striped roofs</title>
+  <rect width="400" height="300" fill="#1a1f3d"/>
+  <!-- two strings of lights -->
+  <g fill="none" stroke="#5c5f80" stroke-width="2">
+    <path d="M0 30 Q 200 120 400 30"/>
+    <path d="M0 80 Q 200 160 400 80"/>
+  </g>
+  <g>
+    <circle cx="40" cy="53" r="6" fill="#f5c451"/>
+    <circle cx="80" cy="66" r="6" fill="#e76f51"/>
+    <circle cx="120" cy="75" r="6" fill="#2a9d8f"/>
+    <circle cx="160" cy="80" r="6" fill="#ffd166"/>
+    <circle cx="200" cy="82" r="6" fill="#f5c451"/>
+    <circle cx="240" cy="80" r="6" fill="#e76f51"/>
+    <circle cx="280" cy="75" r="6" fill="#2a9d8f"/>
+    <circle cx="320" cy="66" r="6" fill="#ffd166"/>
+    <circle cx="360" cy="53" r="6" fill="#f5c451"/>
+    <circle cx="60" cy="107" r="6" fill="#2a9d8f"/>
+    <circle cx="120" cy="121" r="6" fill="#f5c451"/>
+    <circle cx="180" cy="127" r="6" fill="#e76f51"/>
+    <circle cx="240" cy="125" r="6" fill="#ffd166"/>
+    <circle cx="300" cy="117" r="6" fill="#2a9d8f"/>
+    <circle cx="360" cy="101" r="6" fill="#e76f51"/>
+  </g>
+  <!-- food stand 1 -->
+  <rect x="30" y="200" width="150" height="92" fill="#8d5a3b"/>
+  <rect x="44" y="208" width="122" height="30" fill="#2b1d14"/>
+  <rect x="44" y="208" width="122" height="30" fill="#f5c451" fill-opacity="0.35"/>
+  <rect x="30" y="238" width="150" height="8" fill="#5a3825"/>
+  <g fill="#e76f51">
+    <rect x="20" y="176" width="17" height="28"/>
+    <rect x="54" y="176" width="17" height="28"/>
+    <rect x="88" y="176" width="17" height="28"/>
+    <rect x="122" y="176" width="17" height="28"/>
+    <rect x="156" y="176" width="17" height="28"/>
+  </g>
+  <g fill="#fff4e0">
+    <rect x="37" y="176" width="17" height="28"/>
+    <rect x="71" y="176" width="17" height="28"/>
+    <rect x="105" y="176" width="17" height="28"/>
+    <rect x="139" y="176" width="17" height="28"/>
+    <rect x="173" y="176" width="17" height="28"/>
+  </g>
+  <!-- food stand 2 -->
+  <rect x="220" y="200" width="150" height="92" fill="#4f6d7a"/>
+  <rect x="234" y="208" width="122" height="30" fill="#14232b"/>
+  <rect x="234" y="208" width="122" height="30" fill="#f5c451" fill-opacity="0.35"/>
+  <rect x="220" y="238" width="150" height="8" fill="#2f434c"/>
+  <g fill="#2a9d8f">
+    <rect x="210" y="176" width="17" height="28"/>
+    <rect x="244" y="176" width="17" height="28"/>
+    <rect x="278" y="176" width="17" height="28"/>
+    <rect x="312" y="176" width="17" height="28"/>
+    <rect x="346" y="176" width="17" height="28"/>
+  </g>
+  <g fill="#fff4e0">
+    <rect x="227" y="176" width="17" height="28"/>
+    <rect x="261" y="176" width="17" height="28"/>
+    <rect x="295" y="176" width="17" height="28"/>
+    <rect x="329" y="176" width="17" height="28"/>
+    <rect x="363" y="176" width="17" height="28"/>
+  </g>
+  <rect y="290" width="400" height="10" fill="#0d0f1f"/>
+</svg>
