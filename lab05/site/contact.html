@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact, opening hours and directions for the Moonlake Jazz Festival.">
+  <title>Moonlake Jazz Festival – Contact</title>
+  <!-- The ONE page of the site that uses Bootstrap instead of W3.CSS – never both frameworks on one page.
+       My own stylesheet comes after the framework. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Same header, navigation and footer as on the W3.CSS pages – rebuilt with Bootstrap classes
+       (README.md lists which class replaces which) -->
+  <header class="site-header px-3 py-3" id="top">
+    <div class="equalizer" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h1 class="hero-title">Moonlake Jazz Festival</h1>
+    <p class="tagline">Three nights of jazz on the shore of Lake Moonlake · 16–18 July 2027</p>
+  </header>
+
+  <!-- NAVIGATION: the current page gets the class "active" and aria-current="page" -->
+  <nav class="main-nav bg-body-tertiary px-3 py-2" aria-label="Main navigation">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="lineup.html">Line-up</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Tickets</a></li>
+      <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container my-4">
+
+    <section class="fade-in" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact and directions</h2>
+      <p class="lead-text">Questions about tickets, volunteering or press passes? Write to us – we answer within two working days.</p>
+      <!-- cards in a row: row g-3 + col-md-4 (W3.CSS: w3-row-padding + w3-col m4) -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <article class="card h-100 card-lift">
+            <div class="card-body">
+              <h3 class="card-title h5">Write to us</h3>
+              <p class="card-text">One address for everything: tickets, volunteers, press and lost property.</p>
+              <a href="mailto:info@example.com" class="btn btn-warning btn-anim pulse">info@example.com</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card h-100 card-lift">
+            <div class="card-body">
+              <h3 class="card-title h5">Info point</h3>
+              <p class="card-text">During the festival the info point is next to the main entrance – see the opening hours below.</p>
+              <a href="tickets.html" class="btn btn-success btn-anim">Ticket prices</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card h-100 card-lift">
+            <div class="card-body">
+              <h3 class="card-title h5">Find us</h3>
+              <p class="card-text">North Shore meadow, Lake Moonlake. The festival map is in the
+                <a href="index.html#guide">festival guide</a> on the home page.</p>
+              <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-anim">OpenStreetMap (new tab)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-in" aria-labelledby="hours-title">
+      <h2 id="hours-title">Opening hours during the festival</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped caption-top">
+          <caption>Info point and ticket desk at the main entrance</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Info point</th>
+              <th scope="col">Ticket desk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Friday, 16 July</th>
+              <td>14:00 – 01:00</td>
+              <td>14:00 – 22:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday, 17 July</th>
+              <td>10:00 – 02:00</td>
+              <td>10:00 – 22:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday, 18 July</th>
+              <td colspan="2">10:00 – 21:00 (info point and ticket desk together)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fade-in" aria-labelledby="travel-title">
+      <h2 id="travel-title">How to get here</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><strong>By train:</strong> to Moonlake station, then the free festival shuttle bus (every 20 minutes).</li>
+        <li class="list-group-item"><strong>By car:</strong> parking P1 next to the main entrance, 20 lei per day.</li>
+        <li class="list-group-item"><strong>By bike:</strong> free, guarded bike parking at the main entrance.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: e-mail link (mailto:), external links in a NEW tab (always with rel), Back to top -->
+  <footer class="site-footer px-3 py-3">
+    <p>Moonlake Jazz Festival 2027 · North Shore, Lake Moonlake ·
+      <a href="mailto:info@example.com">info@example.com</a></p>
+    <p>Read more:
+      <a href="https://en.wikipedia.org/wiki/Jazz" target="_blank" rel="noopener noreferrer">Jazz on Wikipedia (new tab)</a> ·
+      <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap (new tab)</a></p>
+    <p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></p>
+  </footer>
+
+</body>
+</html>
