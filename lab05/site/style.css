@@ -1,0 +1,415 @@
+/* Lab 5 – Moonlake Jazz Festival – my own CSS
+   Loaded AFTER W3.CSS (or after Bootstrap on contact.html) on every page,
+   so my rules win over the framework when the specificity is the same.
+   No !important in this file and no style="…" in the HTML.
+
+   Colours: night blue #1a1f3d · violet #3b2a6b · gold #f5c451
+
+    1. Base                 6. Gallery                  11. @keyframes animations
+    2. Header               7. Line-up (long page)      12. Small screens
+    3. Navigation           8. Festival guide (iframe)  13. Reduced motion (always last)
+    4. Buttons              9. Prices table
+    5. Cards               10. Lists and footer
+
+   Transitions:  .main-nav a · .btn-anim · .card-lift · .photo-frame img
+   Animations:   slide-in · pulse · fade-up · equalize */
+
+
+/* ---------- 1. Base ---------- */
+html {
+  scroll-behavior: smooth;            /* anchor links glide to their section */
+}
+
+body {
+  background-color: #f6f4fb;
+  color: #222;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+main > section {
+  margin-bottom: 32px;
+}
+
+.lead-text {
+  max-width: 760px;
+  font-size: 17px;
+}
+
+
+/* ---------- 2. Header – the same look with W3.CSS and with Bootstrap ---------- */
+.site-header {
+  overflow: hidden;                   /* keeps the floating equalizer inside the header */
+  color: #fff;
+  background: linear-gradient(120deg, #1a1f3d 0%, #3b2a6b 65%, #6a3d7a 100%);
+}
+
+.hero-title {
+  margin: 8px 0 4px;
+  color: #f5c451;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  animation: slide-in 1s ease-out;    /* animation 1 */
+}
+
+.tagline {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+/* decorative equalizer on the right side of the header: five golden bars */
+.equalizer {
+  float: right;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 56px;
+  margin: 12px 8px 0 16px;
+}
+
+.equalizer span {
+  width: 8px;
+  border-radius: 2px;
+  background-color: #f5c451;
+  transform-origin: bottom;
+  animation: equalize 0.9s ease-in-out infinite alternate;   /* animation 4 */
+}
+
+.equalizer span:nth-child(1) { height: 55%; }
+.equalizer span:nth-child(2) { height: 100%; animation-delay: -0.3s; }
+.equalizer span:nth-child(3) { height: 70%;  animation-delay: -0.6s; }
+.equalizer span:nth-child(4) { height: 90%;  animation-delay: -0.2s; }
+.equalizer span:nth-child(5) { height: 45%;  animation-delay: -0.5s; }
+
+
+/* ---------- 3. Navigation ---------- */
+/* transition 1: W3.CSS gives the links a grey hover colour – the transition makes it fade in */
+.main-nav a {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:focus-visible {
+  outline: 3px solid #f5c451;         /* w3-bar removes the focus outline – keyboard users need it */
+  outline-offset: -3px;
+}
+
+/* Bootstrap page: the same colours as the W3.CSS bar (w3-indigo is #3f51b5) */
+.main-nav .nav-pills {
+  --bs-nav-pills-link-active-bg: #3f51b5;
+}
+
+.main-nav .nav-link {
+  color: #000;
+}
+
+.main-nav .nav-link:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+
+/* ---------- 4. Buttons ---------- */
+/* transition 2: buttons rise a little and get a shadow */
+.btn-anim {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-anim:hover,
+.btn-anim:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.pulse:hover,
+.pulse:focus-visible {
+  animation: none;                    /* stop pulsing while the visitor points at the button */
+}
+
+.button-row a {
+  margin: 0 8px 8px 0;
+}
+
+
+/* ---------- 5. Cards ---------- */
+/* transition 3: cards lift up (W3.CSS cards and the Bootstrap cards on contact.html) */
+.card-lift {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* W3.CSS columns are floats – as a flex row, all cards of a row get the same height */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-row > .w3-col {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.card-row > .w3-col > * {
+  flex: 1;
+}
+
+.card-photo {
+  display: block;
+  width: 100%;
+}
+
+
+/* ---------- 6. Gallery ---------- */
+.photo-card {
+  margin: 0;                          /* <figure> has a big default margin */
+  overflow: hidden;
+}
+
+.photo-frame {
+  overflow: hidden;
+}
+
+/* transition 4: the picture zooms in inside its frame */
+.photo-frame img {
+  display: block;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.08);
+}
+
+.photo-card figcaption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
+/* ---------- 7. Line-up – the long page with anchors ---------- */
+.page-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.day-section {
+  padding-top: 8px;
+  border-top: 3px solid #f5c451;
+}
+
+.act-time {
+  margin-bottom: 0;
+  color: #555;
+}
+
+.back-to-top {
+  color: #3b2a6b;
+  font-weight: 600;
+}
+
+
+/* ---------- 8. Festival guide – the iframe on the home page ---------- */
+.guide-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-frame {
+  display: block;
+  width: 100%;
+  height: 460px;
+  border: 3px solid #3b2a6b;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* the small pages in pages/ that open inside the frame */
+.frame-page {
+  background-color: #fff;
+}
+
+.frame-title {
+  margin-top: 12px;
+  font-size: 26px;
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+}
+
+.faq-list dt {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.faq-list dd {
+  margin-left: 0;
+}
+
+
+/* ---------- 9. Prices table (merged cells) ---------- */
+.price-table caption {
+  padding: 8px 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #ddd;             /* shows which cells are merged */
+}
+
+.price-table thead th {
+  color: #fff;
+  background-color: #3b2a6b;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.price-table tbody th {
+  background-color: #ede7f6;
+  vertical-align: middle;
+}
+
+.price-table td {
+  text-align: center;
+}
+
+.price-table td:first-of-type {
+  text-align: left;
+}
+
+.price-table td:first-child {
+  padding-left: 8px;                  /* W3.CSS gives the first cell of a row 16px */
+}
+
+
+/* ---------- 10. Lists and footer ---------- */
+.included-list {
+  max-width: 640px;
+}
+
+.site-footer {
+  color: #fff;
+  background-color: #1a1f3d;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
+.site-footer a {
+  color: #f5c451;
+}
+
+
+/* ---------- 11. @keyframes animations ---------- */
+/* animation 1: the site title slides in from the left (.hero-title, section 2) */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* animation 2: the most important button pulses gently, forever */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* animation 3: sections fade in and move up a little when the page opens */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-up 0.8s ease-out both;
+}
+
+/* animation 4: the equalizer bars in the header go up and down (section 2) */
+@keyframes equalize {
+  from { transform: scaleY(0.3); }
+  to   { transform: scaleY(1); }
+}
+
+
+/* ---------- 12. Small screens (phones) ---------- */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .equalizer {
+    display: none;
+  }
+
+  .guide-frame {
+    height: 400px;
+  }
+}
+
+
+/* ---------- 13. Reduced motion – ALWAYS LAST ----------
+   Some people get dizzy from movement and switch on "reduce motion" in their system.
+   For them all my animations and transitions are off and nothing moves on hover. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-title,
+  .pulse,
+  .fade-in,
+  .equalizer span {
+    animation: none;
+  }
+
+  .main-nav a,
+  .btn-anim,
+  .card-lift,
+  .photo-frame img {
+    transition: none;
+  }
+
+  .btn-anim:hover,
+  .btn-anim:focus-visible,
+  .card-lift:hover,
+  .photo-frame:hover img {
+    transform: none;
+  }
+}
